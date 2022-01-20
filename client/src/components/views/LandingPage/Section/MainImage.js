@@ -1,7 +1,6 @@
 import React from "react";
 
 function MainImage(props) {
-  console.log("props", props.image);
   return (
     <div
       style={{
@@ -23,8 +22,12 @@ function MainImage(props) {
             marginLeft: "2rem",
           }}
         >
-          <h2> title </h2>
-          <p style={{ color: "white", fontSize: "1rem" }}> description </p>
+          <h2 style={{ color: "white" }}>
+            title : {props?.title?.original_title}
+          </h2>
+          <p style={{ color: "white", fontSize: "1rem" }}>
+            description : {props?.title?.overview}
+          </p>
         </div>
       </div>
     </div>
