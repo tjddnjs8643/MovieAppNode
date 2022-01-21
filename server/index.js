@@ -16,11 +16,11 @@ const config = require("./config/key");
 
 const mongoose = require("mongoose");
 const connect = mongoose
-  .connect(config.mongoURI, {
+  .connect("mongodb://127.0.0.1:28888", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false,
+    useFindAndModify: true,
   })
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
